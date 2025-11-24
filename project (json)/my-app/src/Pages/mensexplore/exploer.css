@@ -1,0 +1,321 @@
+/* General styling */
+.Appp {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.Appp-headerr {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  font-size: 2.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Appp-mainn {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Carousel styling */
+
+
+.carousel1 {
+  margin-bottom: 10px; /* Ensure carousel has space below header */
+
+}
+
+.carousel1-image1-container1 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* fallback color */
+}
+
+.carousel1-image1 {
+  max-height: 500px;
+  width: auto; /* Maintain aspect ratio */
+}
+
+.carousel1-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.carousel1-caption h3 {
+  color: white;
+}
+
+/* Card styling */
+.cardd{
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  flex: 1 1 calc(20% - 40px); /* 5 cards per row, adjust as needed */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+
+}
+/* VideoComponent.css */
+
+.video-container {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+  width: 100%;
+  height: 700px;
+  display: block;
+}
+
+.cardd:hover {
+  transform: translateY(-10px);
+}
+
+.cardd-imagee {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Ensure image is fully visible */
+  background-color: #f8f9fa; /* fallback color */
+  border-bottom: 1px solid #ddd;
+}
+.cardd-imagee:hover {
+  transform: scaleX(-1);
+}
+.cardd h2 {
+  font-size: 1.5em;
+  margin: 15px;
+  color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) { /* Laptop */
+  .Appp-headerr {
+    font-size: 2em;
+    padding: 15px;
+  }
+
+  .carousell-imagee-containerr {
+    height: 450px;
+  }
+
+  .cardd {
+    flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) { /* Tablet */
+  .Appp-headerr {
+    font-size: 1.8em;
+    padding: 10px;
+  }
+
+  .carousell-imagee-containerr {
+    height: 400px;
+  }
+
+  .cardd{
+    flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 576px) { /* Mobile */
+  .Appp-headerr {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .carousell-imagee-container {
+    height: 300px;
+  }
+
+  .cardd {
+    flex: 1 1 100%; /* Cards will be stacked */
+    margin: 10px 0;
+  }
+
+  .cardd h2 {
+    font-size: 1.2em;
+    margin: 10px;
+  }
+}
+.logooo {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center align items horizontally */
+  gap: 60px; /* Adjust the space between images */
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+.logooo img {
+  width:80px; /* Set a specific width for the images */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image covers the specified dimensions */
+}
+
+.textt {
+  background: linear-gradient(135deg, #f7f9fc, #cfcfdb);
+  color: rgb(18, 18, 18);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: auto;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  
+  animation: slideRightToLeft 20s linear infinite;
+
+
+}
+
+.textt:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.textt p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.textt::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .textt {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .textt {
+    padding: 15px;
+  }
+
+  .text p {
+    font-size: 1.1em;
+  }
+}
+
+/* Specific styling for .card */
+.cardd {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific styling for h5 inside .card */
+.cardd h5 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333; /* Dark gray text */
+  text-align: center;
+  font-weight: bold;
+}
+
+.cardd h5:hover {
+  color: #007bff; /* Change text color on hover to a shade of blue */
+}
+
+/* Additional styles */
+.cardd p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #666; /* Medium gray text */
+}
+
+.cardd a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.cardd a:hover {
+  text-decoration: underline;
+}
+/* Styling for the .text div and p element */
+.textt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust height as needed */
+  background-color: #f8f9fa;
+  margin: 20px 0;
+}
+
+.textt p {
+  font-size: 1.5em;
+  color: #555;
+  text-align: center;
+  font-weight: bold;
+  /* text-transform:lowercase; */
+  animation: moveText 3s linear infinite;
+}
+
+/* Animation keyframes */
+@keyframes moveText {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+.Appp-headerr {
+  background-color: #4b88c4;
+  color: white;
+  padding: 10px;
+  font-size: 2.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
+  animation: changeColor 5s infinite alternate; /* Animation for auto color change */
+}
+
+@keyframes changeColor {
+  0% { background-color: #f1f3f6; color: white; } /* Initial color */
+  25% { background-color: #fee6f2; color: #fff; } /* Pink */
+  50% { background-color: #e8f9de; color: #fff; } /* Green */
+  75% { background-color: #f9edd3; color: #333; } /* Yellow */
+  100% { background-color: #dad1f7; color: #fff; } /* Purple */
+}
+

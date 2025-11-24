@@ -1,0 +1,135 @@
+.categories-container {
+    padding: 40px 0;
+    text-align: center;
+    background-image: url('../../Components/Assets/backsss.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Set text color to white for better readability */
+}
+
+.categories-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bolder; /* Ensure the heading text color contrasts well with the background image */
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust column count as needed */
+    gap: 20px;
+    max-width: 600px; /* Optional: Limit the width of the grid container */
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.category-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make sure the card takes full width of the grid column */
+    max-width: 320px; /* Increase the maximum width of each card */
+    margin: 0 auto; /* Center the card within the grid column */
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Rounded corners for top */
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px) scale(1.03); /* Lift card slightly and scale on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.category-content {
+    padding: 12px; /* Reduced padding for smaller cards */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333; /* Ensure the text color contrasts well with the card background */
+}
+
+.category-content h3 {
+    font-size: 1rem; /* Reduced font size */
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.category-content p {
+    font-size: 0.875rem; /* Reduced font size */
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.shop-btn {
+    align-self: center; /* Center align the button */
+    padding: 6px 12px; /* Reduced padding for smaller button */
+    background-color: #ff69b4; /* Pink */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+/* Specific colors for each category */
+.women {
+    background-color: rgba(248, 248, 248, 0.9); /* Light yellow with semi-transparency */
+}
+
+.men {
+    background-color: rgba(248, 248, 248, 0.9); /* Light blue with semi-transparency */
+}
+
+.jewellery {
+    background-color: rgba(248, 248, 248, 0.9); /* Light pink with semi-transparency */
+}
+
+.handbags {
+    background-color: rgba(248, 248, 248, 0.9); /* Light green with semi-transparency */
+}
+
+.quote-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    color: #fff; /* Ensure the text color contrasts well with the background image */
+    font-style: italic;
+}
+
+.quote-author {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #fff; /* Light color for the author text */
+}
+.category-content {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

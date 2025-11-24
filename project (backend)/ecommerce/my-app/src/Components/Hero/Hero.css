@@ -1,0 +1,18 @@
+.home-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Ensure no overflow if images are large */
+}
+
+.carousel {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 630px;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    object-position: center; /* Centers the image */
+}
+

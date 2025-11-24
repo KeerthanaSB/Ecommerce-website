@@ -1,0 +1,183 @@
+/* Navbar styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: #fff;
+    color: black; /* Changed to black for visibility */
+}
+ 
+.logo {
+    height: 70px;
+    padding-top: 15px;
+}
+ 
+.nav-btn {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black; /* Changed to black for visibility */
+    font-size: 1.5rem;
+    z-index: 1001; /* Ensure it's above the menu */
+}
+ 
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+ 
+.nav-links {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style-type: none;
+    flex: 1;
+    padding: 20px;
+    margin-left: 50px; /* Adjust margin to create space between logo and links */
+}
+ 
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+ 
+.nav-links a:hover {
+    background-color: #767778;
+    border-radius: 5px;
+}
+ 
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 2rem; /* Adjust margin to push icons to the right */
+}
+ 
+.nav-icon {
+    color: black; /* Changed to black for visibility */
+    font-size: 1.5rem;
+}
+ 
+.icon {
+    position: relative;
+    cursor: pointer;
+}
+ 
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #555;
+    min-width: 120px;
+    display: none;
+    z-index: 1;
+}
+ 
+.icon:hover .dropdown-content {
+    display: block;
+}
+ 
+.dropdown-content a {
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+ 
+.nav-close-btn {
+    display: none;
+}
+ 
+@media (max-width: 768px) {
+    .nav-btn {
+        display: block; /* Show hamburger menu button on smaller screens */
+    }
+ 
+    .nav-menu {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        top: 80px;
+        left: 0;
+        /* transition: transform 0.1s ease-in-out; */
+        transform: translateY(-100%);
+        z-index: 1000;
+    }
+ 
+    .nav-menu.open {
+        transform: translateY(0);
+        display: flex; /* Show when open */
+    }
+ 
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+ 
+    .nav-links a {
+        padding: 1rem 0;
+        width: 100%;
+    }
+ 
+    .nav-icons {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+        margin-right: 0; /* Reset margin for mobile layout */
+    }
+ 
+    .dropdown-content {
+        position: static;
+        background-color: #fff;
+        width: 100%;
+        display: none;
+    }
+ 
+    .icon:hover .dropdown-content {
+        display: block;
+    }
+ 
+    .nav-close-btn {
+        display: block; /* Show the close button when menu is open */
+        margin-top: 1rem;
+        align-self: center; /* Center the close button */
+    }
+
+    
+}
+
+/* Styles for Logout button */
+.logoutbutton {
+    color: white;
+    background-color: #555;
+    border: none;
+    padding: 12px 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+.logoutbutton:hover {
+    background-color: #333;
+    border-radius: 5px;
+    /* transition: background-color 0.3s ease; */
+}

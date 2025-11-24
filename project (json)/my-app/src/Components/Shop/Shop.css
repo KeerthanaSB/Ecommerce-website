@@ -1,0 +1,132 @@
+.shop-section {
+    padding: 40px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-intro {
+    margin-bottom: 40px;
+}
+
+.shop-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.shop-intro p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.shop-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: #0056b3;
+}
+
+.shop-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Rounded corners for top */
+}
+
+.card-content {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 10px;
+}
+
+.explore-btn {
+    align-self: center; /* Center align the button */
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #4496ed;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 40px);
+    }
+
+    .shop-intro h2 {
+        font-size: 2rem;
+    }
+
+    .shop-intro p {
+        font-size: 1rem;
+    }
+}

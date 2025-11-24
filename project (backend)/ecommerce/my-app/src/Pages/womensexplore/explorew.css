@@ -1,0 +1,391 @@
+/* Image container styling */
+.img-container {
+  max-width: 100%; /* Ensure image container does not exceed viewport width */
+  margin: 0 auto; /* Center the image horizontally */
+  overflow: hidden; /* Hide overflow if image exceeds container */
+}
+
+.img-container img {
+  display: block; /* Ensure img is treated as a block element */
+  width: 100%; /* Ensure image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for text container */
+.text-center {
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add margin for spacing */
+  margin-top: 40px; /* Add margin for spacing */
+}
+
+.text-center p {
+  font-size: 1.2rem; /* Set paragraph font size */
+  color: #666; /* Set paragraph text color */
+}
+
+.text-center h2 {
+  font-size: 2rem; /* Set heading font size */
+  margin-top: 10px; /* Add margin above heading */
+  margin-bottom: 0; /* Remove default margin below heading */
+}
+
+
+.text2 {
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add margin for spacing */
+}
+
+/* Styling for logos container */
+.logos {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center align items horizontally */
+  gap: 90px; /* Adjust the space between images */
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+.logos img {
+  width: 100px; /* Set a specific width for the images */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image covers the specified dimensions */
+}
+
+/* Styling for main container */
+.App-main {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-around; /* Space items evenly */
+  gap: 20px; /* Gap between cards */
+  padding: 20px; /* Padding around main content */
+  background-color: #f2f2f2; /* Background color */
+}
+
+.card2-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styling for individual cards */
+.card2 {
+  max-width: 300px; /* Limit card width */
+  text-align: center; /* Center align text */
+  width: 250px;
+  margin: 10px;
+  padding: 10px; /* Padding inside each card */
+  background-color: #fff; /* Card background color */
+  border-radius: 8px; /* Rounded corners for card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
+  gap: 20px;
+  border: 1px solid #f3f2f2;
+  text-align: center;
+}
+
+.card-image2 {
+  width: 100%; /* Ensure image fills its container */
+  height: 250px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  border-radius: 8px; /* Rounded corners for image */
+  margin-bottom: 10px; /* Space below image */
+}
+
+.card-image2:hover {
+  transform: scaleX(-1); /* Flip image horizontally on hover */
+}
+
+.card2:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.card2 h5 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333; /* Dark gray text */
+  text-align: center;
+  font-weight: bold;
+}
+
+.card2 h5:hover {
+  color: #007bff; /* Change text color on hover to a shade of blue */
+}
+
+/* Additional styles */
+.card2 p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #666; /* Medium gray text */
+}
+
+.card2 a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+/* Styling for header */
+.App-header {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Vertical padding */
+}
+
+.App-header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 2.5rem; /* Header font size */
+}
+
+/* Styling for text section */
+.text {
+  background: linear-gradient(135deg, hwb(0 98% 2% / 0.797), #e1dedf);
+  color: rgb(18, 18, 18);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: auto;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: slideRightToLeft 20s linear infinite;
+}
+
+@keyframes slideRightToLeft {
+  0% {
+      transform: translateX(100%); /* Start offscreen to the right */
+  }
+  100% {
+      transform: translateX(-100%); /* Move offscreen to the left */
+  }
+}
+
+.text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.text::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.4;
+  }
+  100% {
+      transform: scale(0.8);
+      opacity: 0.8;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .App-main {
+      padding: 15px; /* Adjust padding */
+  }
+  .logos {
+      gap: 50px; /* Adjust gap between logos */
+  }
+}
+
+@media (max-width: 992px) {
+  .logos {
+      gap: 30px; /* Further adjust gap between logos */
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+      padding: 20px; /* Adjust padding */
+  }
+  .card {
+      max-width: 250px; /* Adjust card width */
+  }
+}
+
+@media (max-width: 576px) {
+  .text {
+      padding: 15px; /* Adjust padding */
+  }
+  .card {
+      max-width: 100%; /* Full width for cards */
+  }
+}
+
+/* Carousel container styling */
+.carousel-container {
+  margin-top: 20px;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+.card-wrapper1 {
+  flex: 0 0 calc(25% - 20px); /* Each card takes up 25% of the container width with margin */
+  max-width: 250px; /* Adjust based on your design */
+  margin: 10px; /* Margin between cards */
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0; /* Rounded corners on top */
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .card-wrapper1 {
+      flex: 0 0 calc(45% - 20px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper1 {
+      flex: 0 0 calc(100% - 20px); /* One card per row on small screens */
+      max-width: 100%;
+  }
+}
+
+.carousel-container {
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.carousel-container .card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Adjust margin between carousel items */
+}
+
+.carousel-container .card-wrapper1 {
+  flex: 0 0 calc(25% - 20px); /* Adjust width and margin as needed */
+  max-width: calc(25% - 20px); /* Adjust width and margin as needed */
+  margin-bottom: 20px; /* Adjust margin between cards */
+}
+
+.carousel-container .card-wrapper1 .card {
+  height: 100%;
+}
+
+.carousel-container .card-wrapper1 .card-body {
+  padding: 15px; /* Adjust padding as needed */
+}
+
+.carousel-container .card-wrapper1 .card-text {
+  font-size: 14px; /* Adjust font size as needed */
+  line-height: 1.5; /* Adjust line height as needed */
+}
+.App-header {
+  background-color: #4b88c4;
+  color: white;
+  padding: 10px;
+  font-size: 2.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
+  animation: changeColor 5s infinite alternate; /* Animation for auto color change */
+}
+
+@keyframes changeColor {
+  0% { background-color: #dfe9f3; color: white; } /* Initial color */
+  25% { background-color: #ffecf5; color: #fff; } /* Pink */
+  50% { background-color: #e6f7dc; color: #fff; } /* Green */
+  75% { background-color: #f7f2e6; color: #333; } /* Yellow */
+  100% { background-color: #ebeaf6; color: #fff; } /* Purple */
+}
+
+
+/* Carousel styling */
+.carouselw {
+  margin-bottom: 10px; /* Ensure carousel has space below header */
+}
+
+.carouselw-imagew-containerw {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Fallback color */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.carouselw-imagew {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container without distortion */
+}
+
+.carouselw-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.carouselw-caption h3 {
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) { /* Laptop */
+  .carouselw-imagew-containerw {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) { /* Tablet */
+  .carouselw-imagew-containerw {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) { /* Mobile */
+  .carouselw-imagew-containerw {
+    height: 300px;
+  }
+}
